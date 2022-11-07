@@ -1,4 +1,7 @@
 USE codeup_test_db;
+ALTER TABLE albums MODIFY artist VARCHAR(24);
+ALTER TABLE albums MODIFY name VARCHAR(44);
+ALTER TABLE albums MODIFY genre VARCHAR(16);
 INSERT INTO albums (artist, name, release_date, sales, genre)
     Values
         ('Michael Jackson','Thriller','1982',50.2,'Pop'),
