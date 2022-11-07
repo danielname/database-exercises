@@ -1,4 +1,5 @@
 USE codeup_test_db;
+TRUNCATE albums;
 ALTER TABLE albums MODIFY artist VARCHAR(24);
 ALTER TABLE albums MODIFY name VARCHAR(44);
 ALTER TABLE albums MODIFY genre VARCHAR(16);
