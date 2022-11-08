@@ -5,7 +5,7 @@ SELECT emp_no, first_name, last_name FROM employees
         OR first_name = 'Vidya'
         OR first_name = 'Maya')
         AND gender = 'M'
-    ORDER BY last_name ASC, first_name ASC ;
+    ORDER BY last_name ASC, first_name ASC;
 
 SELECT emp_no, first_name, last_name FROM employees
     WHERE last_name REGEXP '^E|e$'
