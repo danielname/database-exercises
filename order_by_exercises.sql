@@ -13,7 +13,8 @@ SELECT emp_no, first_name, last_name FROM employees
 SELECT emp_no, first_name, last_name FROM employees WHERE last_name REGEXP '^E.*e$';
 
 
-SELECT emp_no, first_name, last_name FROM employees WHERE last_name REGEXP 'q[^u]';
+SELECT emp_no, first_name, last_name FROM employees WHERE last_name REGEXP 'q[^u]|q$';
 #this is the limit of regexp, cannot use a single line to look for any q without qu
+#found a way to solve this problem :)
 SELECT emp_no, first_name, last_name FROM employees WHERE last_name Like '%q%' AND last_name NOT LIKE '%qu%';
 
