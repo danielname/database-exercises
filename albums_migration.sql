@@ -6,5 +6,6 @@ CREATE TABLE albums (id INT NOT NULL AUTO_INCREMENT,
     release_date CHAR(4),
     sales FLOAT,
     genre VARCHAR(10),
-    PRIMARY KEY (id)
+    PRIMARY KEY (id),
+    UNIQUE (artist, name)
 );
