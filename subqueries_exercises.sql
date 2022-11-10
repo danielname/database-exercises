@@ -31,3 +31,15 @@ SELECT CONCAT(first_name, ' ', last_name)
             (SELECT emp_no
              FROM dept_manager
              WHERE to_date REGEXP '^9');
+
+#BONUS 1
+SELECT dept_name
+    FROM departments
+    WHERE dept_no IN
+        (SELECT dept_no
+            FROM dept_manager
+            WHERE to_date REGEXP '^9'
+                AND emp_no IN
+                (SELECT emp_no
+                    FROM employees
+                    WHERE gender = 'F'));
