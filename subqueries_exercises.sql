@@ -1,5 +1,6 @@
 USE employees;
 
+#1
 SELECT CONCAT(first_name, ' ', last_name)
     FROM employees
     WHERE hire_date =
@@ -7,15 +8,26 @@ SELECT CONCAT(first_name, ' ', last_name)
            FROM employees
            WHERE emp_no = 101010);
 
+#2 no sub-query
 SELECT title
-FROM titles
-JOIN employees e
-    ON e.emp_no = titles.emp_no
-WHERE first_name = 'Aamod';
+    FROM titles
+    JOIN employees e
+        ON e.emp_no = titles.emp_no
+    WHERE first_name = 'Aamod';
 
+#2 with sub-query
 SELECT title
-FROM titles
-WHERE emp_no IN
+    FROM titles
+    WHERE emp_no IN
       (SELECT emp_no
           FROM employees
           WHERE first_name = 'Aamod');
+
+#3
+SELECT CONCAT(first_name, ' ', last_name)
+    FROM employees
+    WHERE gender = 'F'
+        AND emp_no IN
+            (SELECT emp_no
+             FROM dept_manager
+             WHERE to_date REGEXP '^9');
