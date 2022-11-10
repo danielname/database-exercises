@@ -43,3 +43,12 @@ SELECT dept_name
                 (SELECT emp_no
                     FROM employees
                     WHERE gender = 'F'));
+
+#BONUS 2
+SELECT first_name, last_name
+    FROM employees
+    WHERE emp_no =
+          (SELECT emp_no
+              FROM salaries
+              ORDER BY salary DESC
+              LIMIT 1);
