@@ -34,4 +34,4 @@ INSERT INTO albums (artist, name, release_date, sales, genre)
         ('Pink Floyd','The Wall','1979',18.9,'Progressive Rock'),
         ('The Beatles','Sgt. Pepper\'s Lonely Hearts Club Band','1967',18.3,'Rock'),
         ('Michael Jackson','Dangerous','1991',17,'New Jack Swing'),
-        ('The Beatles','Abbey Road','1969',16.9,'Rock')
+        ('The Beatles','Abbey Road','1969',16.9,'Rock');
